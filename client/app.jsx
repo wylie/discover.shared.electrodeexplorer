@@ -7,11 +7,10 @@
 import React from "react";
 
 import { routes } from "./routes";
-import { Router } from "react-router";
+import { Router, browserHistory } from "react-router";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { Resolver } from "react-resolver";
-import { createHistory } from "history";
 import { configureStore } from "./store";
 
 import "./styles/base.styl";
@@ -26,7 +25,7 @@ global.webappStart = function () {
   Resolver.render(
     () => (
       <Provider store={store}>
-        <Router history={createHistory()}>{routes}</Router>
+        <Router history={browserHistory}>{routes}</Router>
       </Provider>
     ),
     rootEl

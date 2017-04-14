@@ -67,8 +67,8 @@
     "semver": "^5.2.0"
   },
   "devDependencies": {
-    "electrode-archetype-react-app": "^1.0.0",
-    "electrode-archetype-react-app-dev": "^1.0.0",
+    "electrode-archetype-react-app": "^2.0.0",
+    "electrode-archetype-react-app-dev": "^2.0.0",
     "gulp": "^3.9.1"
   }
 }
