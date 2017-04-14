@@ -1,0 +1,31 @@
+{
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "memory": 1024,
+      "portMappings": [
+        {
+          "hostPort": 3000,
+          "containerPort": 3000,
+          "protocol": "tcp"
+        }
+      ],
+      "essential": true,
+      "name": "%TASK_NAME",
+      "image": "%IMAGE_ID",
+      "cpu": 128,
+      "memoryReservation": 512,
+      "environment": [
+        {
+          "name" : "NODE_ENV",
+          "value": "production"
+        },
+        {
+          "name": "APP_ENV",
+          "value": "%ENVIRONMENT_VALUE"
+        }
+      ]
+    }
+  ],
+  "family": "%FAMILY_NAME"
+}
