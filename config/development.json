@@ -5,7 +5,7 @@
   "plugins": {
     "./server/poll": {
       "options": {
-        "enable": false
+        "enable": true
       }
     }
   },
