@@ -58,10 +58,10 @@ export default class Component extends React.Component {
     const { repos } = menu[org];
     const sortedRepos = Object.keys(repos);
     sortedRepos.sort();
-    return sortedRepos.map((repoName) => {
+    return sortedRepos.map((repoName, i) => {
       const { link, submodules } = repos[repoName];
 
-      return (<li>
+      return (<li key={i}>
         <a
           href={`/${link}`}>
           {repoName}

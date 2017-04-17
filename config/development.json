@@ -11,5 +11,26 @@
   },
   "ui": {
     "env": "development"
+  },
+  "eureka": {
+    "appName": "electrodeexplorer",
+    "vipAddress": "electrodeexplorer",
+    "host": "127.0.0.1",
+    "hostName" : "electrodeexplorer",
+    "ipAddress": "",
+    "region": "",
+    "eurekaPort": 8761,
+    "dataCenterInfo": {
+      "@class": "com.netflix.appinfo.InstanceInfo$DefaultDataCenterInfo",
+      "name": "MyOwn"
+    },
+    "useLocalMetadata": true,
+    "preferIpAddress": true
+  },
+  "connections": {
+    "default": {
+      "port": 3000,
+      "compression": false
+    }
   }
 }

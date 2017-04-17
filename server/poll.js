@@ -9,6 +9,7 @@ const GitHubApi = require("github");
 const Promise = require("bluebird");
 const Config = require("electrode-confippet").config;
 const github = new GitHubApi(Config.githubApi);
+const REPOS_INCLUDE = Config.REPOS_INCLUDE;
 const githubAuthObject = require("./utils/github-auth-object");
 const fs = require("fs");
 const path = require("path");
@@ -18,6 +19,8 @@ const Poll = {};
 
 let command = "";
 
+const shouldIncludeRepo = (repo) =>  REPOS_INCLUDE.some((org) => repo.indexOf(org) === 0);
+
 function getRepos(org, page, repos) {
   return new Promise((resolve) => {
     github.repos.getForOrg({
@@ -26,11 +29,13 @@ function getRepos(org, page, repos) {
       per_page: 100
     }, (err, res) => {
       res.forEach((repo) => {
-        const fullName = repo.full_name.split("/");
-        repos.push({
-          org: fullName[0],
-          repoName: fullName[1]
-        });
+				if (shouldIncludeRepo(repo.full_name)) {
+          const fullName = repo.full_name.split("/");
+          repos.push({
+            org: fullName[0],
+            repoName: fullName[1]
+          });
+        }
       });
 
       if (res.length < 100) {
@@ -74,6 +79,7 @@ Poll.register = (server, options, next) => {
     .then(() => {
       repos.forEach((repo, index) => {
         const { org, repoName } = repo;
+				console.log(org, repoName);
         addCronJob(`curl -X POST http://localhost:3000/api/update/${org}/${repoName} > /dev/null`, index);
       });
     })
@@ -85,12 +91,14 @@ Poll.register = (server, options, next) => {
           return;
         }
 
-        exec(`crontab ${filePath}`, (error) => {
+        exec(`crontab ${filePath}`, (error, stdout, stderr) => {
           if (error) {
             console.error(`exec error: ${error}`);
             return;
           }
 
+          console.log(stderr);
+          console.log(stdout);
           console.log("Cron job set.");
         });
       });

@@ -269,8 +269,8 @@ export default class Component extends React.Component {
     return (
       <table>
         <tbody>
-          {data.map((detail) => (
-            <tr>
+          {data.map((detail, i) => (
+            <tr key={i}>
               <td>
                 <a href={detail.uri} target="_blank" className="detail-uri">
                   {detail.displayName}

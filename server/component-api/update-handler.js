@@ -56,6 +56,7 @@ const updateFiles = (repoFilePath, org, repoName, data) => {
 };
 
 const UpdateHandler = function (request, reply) {
+	console.log("UPDATE HANDLER");
 
   if (!ghToken) {
     // No token? No automatic updates.
@@ -102,6 +103,7 @@ const UpdateHandler = function (request, reply) {
         version = version.substring(0, version.indexOf("."));
 
         const keywords = result.pkg.keywords;
+
         setTimeout(() => {
           console.log(`fetching module ${result.meta.name}`);
           fetchModuleDemo(result.meta, version, request.server, keywords);
