@@ -46,7 +46,7 @@ node("docker") {
 
   shared.basicECSDeploy('devqa')
 
-  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplorer","electrodeexplorer.vpca.us-east-1","eis-deliverydevqa.cloud.")
-  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplorer","electrodeexplorer","vpca.us-east-1.eis-deliverydevqa.cloud.")
+  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplore","electrodeexplorer.vpca.us-east-1","eis-deliverydevqa.cloud.")
+  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplore","electrodeexplorer","vpca.us-east-1.eis-deliverydevqa.cloud.")
 
 }
