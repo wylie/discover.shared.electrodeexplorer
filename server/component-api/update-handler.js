@@ -56,7 +56,6 @@ const updateFiles = (repoFilePath, org, repoName, data) => {
 };
 
 const UpdateHandler = function (request, reply) {
-	console.log("UPDATE HANDLER");
 
   if (!ghToken) {
     // No token? No automatic updates.

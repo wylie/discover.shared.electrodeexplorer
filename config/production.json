@@ -5,24 +5,5 @@
 
   "ui": {
     "env": "production"
-  },
-  "eureka": {
-    "appName": "electrodeexplorer",
-    "vipAddress": "electrodeexplorer",
-    "ipAddress": "",
-    "region": "us-east-1",
-    "eurekaPort": 8761,
-    "dataCenterInfo": {
-      "@class": "com.netflix.appinfo.AmazonInfo",
-      "name": "Amazon"
-    },
-    "useLocalMetadata": true,
-    "preferIpAddress": true
-  },
-  "connections": {
-    "default": {
-      "port": 3000,
-      "compression": false
-    }
   }
 }

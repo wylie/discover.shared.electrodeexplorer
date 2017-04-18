@@ -21,7 +21,6 @@ const extractMetaData = (pkg, repoUrl) => {
 };
 
 const fetchRepo = (org, repoName) => {
-	console.log("FETCHING REPO", org, repoName);
 
   github.authenticate(githubAuthObject);
 

@@ -46,14 +46,12 @@
     "babel-traverse": "^6.10.4",
     "bluebird": "^3",
     "classnames": "^2.2.5",
-    "electrode-archetype-ebsco": "^1.0.23",
-    "electrode-archetype-react-component": "^1.0.0",
-    "electrode-archetype-react-component-dev": "^1.0.0",
+    "electrode-archetype-react-app": "^1.0.0",
+    "electrode-archetype-react-component": "~1.1.0",
     "electrode-confippet": "^1.5.0",
     "electrode-redux-router-engine": "^1.0.0",
     "electrode-server": "^1.0.0",
     "electrode-static-paths": "^1.0.0",
-    "eureka-js-client": "^4.3.0",
     "exenv": "^1.2.0",
     "github": "^1.1.2",
     "history": "~1.13.1",
@@ -69,8 +67,8 @@
     "semver": "^5.2.0"
   },
   "devDependencies": {
-    "electrode-archetype-react-app": "^2.0.0",
-    "electrode-archetype-react-app-dev": "^2.0.0",
+    "electrode-archetype-react-app-dev": "^1.0.0",
+    "electrode-archetype-react-component-dev": "~1.1.0",
     "gulp": "^3.9.1",
     "raw-loader": "^0.5.1"
   }

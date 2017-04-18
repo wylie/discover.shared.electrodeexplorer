@@ -313,12 +313,14 @@ export default class Component extends React.Component {
     }
 
     return (
-      <div>
-        { this._renderTitle(meta) }
-        { this._renderDoc() }
-        <div id="placeholder" />
-        <div className="demo">
-          { this._renderDemo() }
+      <div className="component-body">
+        <div className="component-content">
+          { this._renderTitle(meta) }
+          { this._renderDoc() }
+          <div id="placeholder" />
+          <div className="demo">
+            { this._renderDemo() }
+          </div>
         </div>
         { this._renderUsage(usage, deps) }
       </div>
