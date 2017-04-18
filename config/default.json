@@ -8,7 +8,7 @@
     "./server/health-api": {},
     "./server/poll": {
       "options": {
-        "enable": true
+        "enable": false
       }
     },
     "./server/webapp": {
