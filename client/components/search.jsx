@@ -19,9 +19,9 @@ const Results = (props) => {
         result{count > 1 ? "s" : ""}:</h3>
       {count &&
         <div className="results-list">
-        {matched.map((result) => {
+        {matched.map((result, i) => {
           return (
-          <div className="search-result">
+          <div className="search-result" key={i}>
             <a href={`/${result.module}`}>
             {result.isModule && <span className="module">Module <em>{result.module}</em></span>}
             {result.matches && <span className="matches">{result.matches.join(", ")} </span>}

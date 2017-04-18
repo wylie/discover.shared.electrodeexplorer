@@ -8,8 +8,8 @@ const Body = (props) => {
     <div className="explorer">
       <Header/>
       <SearchBar/>
-      <Menu/>
       <div className="explorer-body">
+        <Menu/>
         {props.children}
       </div>
     </div>

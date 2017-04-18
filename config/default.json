@@ -36,11 +36,14 @@
   },
 
   "ORGS": [
+		"EBSCOIS"
+  ],
 
+  "REPOS_INCLUDE": [
+		"EBSCOIS/react-"
   ],
 
   "REPOS_USAGE_INCLUDE": [
-
   ],
 
   "REPOS_USAGE_EXCLUDE": [

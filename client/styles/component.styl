@@ -16,6 +16,21 @@
   margin-bottom:20px;
 }
 
+.component-body {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 875px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.component-content {
+  width: 100%;
+  padding: 0 10px;
+}
+
 .component-version {
   font-weight: 300;
   color: #999;

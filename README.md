@@ -1,7 +1,7 @@
 Electrode Explorer
 ================
 
-> An electrode application that allows you to view all the components in your organization, play with the components, read the component docs, view the different versions of the component, and more - All in your browser.  
+> An electrode application that allows you to view all the components in your organization, play with the components, read the component docs, view the different versions of the component, and more - All in your browser.
 [View The Live Demo](https://electrode-explorer.herokuapp.com/)
 
 <img src="/data/screenshot.png" height="500px"/>
@@ -57,6 +57,11 @@ This post processing script works well with all electrode components (meaning co
   "ORGS": [
     // org/user names under which components will be included in the explorer
     // for example, put ["xxx", "yyy"] to include every repo under github.com/xxx and github.com/yyy
+  ],
+
+  "REPOS_INCLUDE": [
+    // components need to contain one of these substrings to be included in usages
+    // for example, put ["react"] so consumers named /*react*/ will be included in usages
   ],
 
   "REPOS_USAGE_INCLUDE": [

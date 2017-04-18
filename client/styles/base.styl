@@ -1,17 +1,53 @@
+@require "./reset";
 @require "./component";
 @require "./explorer";
 @require "./menu";
 @require "./search";
 @require "./usage";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i');
+
+@font-face {
+  font-family: 'Roboto';
+}
+
+*,
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  min-width: 15.5em;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #222;
   background:#efefef;
   margin-top: -20px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   color: #007dc6;
   text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
 }
 
 button, html, input, select, textarea {

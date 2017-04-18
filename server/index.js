@@ -1,5 +1,10 @@
 "use strict";
 var extendRequire = require("isomorphic-loader/lib/extend-require");
+
+require.extensions[".css"] = () => {
+  return;
+};
+
 extendRequire()
   .then(function () {
     /*eslint-disable*/
