@@ -1,11 +1,11 @@
 {
-  "name": "electrode-explorer",
+  "name": "electrodeexplorer",
   "version": "1.0.0",
   "main": "server/index.js",
   "description": "Showcase/Explorer for Electrode components",
   "engine": {
-    "node": ">=4.0.0",
-    "npm": ">=3.0.0"
+    "node": "^4.x.x || ^6.x.x",
+    "npm": ">= 3.x.x"
   },
   "scripts": {
     "start": "gulp dev",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/electrode-io/electrode-explorer.git"
+    "url": "https://github.com/electrode-io/electrodeexplorer.git"
   },
   "keywords": [
     "react",
@@ -41,7 +41,7 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/electrode-io/electrode-explorer/issues"
+    "url": "https://github.com/electrode-io/electrodeexplorer/issues"
   },
   "dependencies": {
     "babel-traverse": "^6.10.4",
@@ -49,14 +49,11 @@
     "classnames": "^2.2.5",
     "electrode-archetype-react-app": "^1.0.0",
     "electrode-archetype-react-component": "~1.1.0",
-    "electrode-archetype-react-app-dev": "^1.0.0",
-    "electrode-archetype-react-component-dev": "~1.1.0",
     "electrode-confippet": "^1.5.0",
     "electrode-redux-router-engine": "^1.0.0",
     "electrode-server": "^1.0.0",
     "electrode-static-paths": "^1.0.0",
     "exenv": "^1.2.0",
-    "gulp": "^3.9.1",
     "github": "^1.1.2",
     "history": "~1.13.1",
     "inert": "^4.0.1",
@@ -71,6 +68,9 @@
     "semver": "^5.2.0"
   },
   "devDependencies": {
+    "electrode-archetype-react-app-dev": "^1.0.0",
+    "electrode-archetype-react-component-dev": "~1.1.0",
+    "gulp": "^3.9.1",
     "raw-loader": "^0.5.1"
   }
 }

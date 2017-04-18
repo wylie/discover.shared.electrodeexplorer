@@ -5,5 +5,4 @@ ENV DIR /usr/src/app
 RUN mkdir -p $DIR
 WORKDIR $DIR
 COPY . $DIR
-RUN npm run build
 ENTRYPOINT ["node", "server"]
