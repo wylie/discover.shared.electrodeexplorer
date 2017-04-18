@@ -34,7 +34,19 @@ node("docker") {
   * Bare bones ECS deployment
   * Stages: Deploy to ECS
   */
-  shared.basicECSDeploy("default")
-  shared.basicECSDeploy("devqa")
+  def targetGroupArnDevqa = shared.setupLoadBalancer("devqa", "3000")
+
+  def albNameDevqa = shared.setupALB("devqa",
+      targetGroupArnDevqa,
+       false,
+       "Dmz",
+       "eis-deliverydevqa.cloud.",
+       false
+    )
+
+  shared.basicECSDeploy('devqa')
+
+  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplorer","electrodeexplorer.vpca.us-east-1","eis-deliverydevqa.cloud.")
+  shared.setApplicationLoadBalancerDNSAlias("devqa","disvoversharedelectrodeexplorer","electrodeexplorer","vpca.us-east-1.eis-deliverydevqa.cloud.")
 
 }
