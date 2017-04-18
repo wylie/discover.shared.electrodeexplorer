@@ -36,15 +36,5 @@ node("docker") {
   */
   shared.basicECSDeploy("default")
   shared.basicECSDeploy("devqa")
-  shared.basicECSDeploy("integration")
-
- /*
-  *
-  * Deploy to ECS
-  * Live environment
-  * Stages: Deploy to ECS
-  */
-  shared.liveDeploymentGate()
-  shared.basicECSDeploy("live")
 
 }

@@ -8,8 +8,9 @@
     "npm": ">=3.0.0"
   },
   "scripts": {
+    "start": "gulp dev",
+    "test": "gulp check",
     "build": "gulp build",
-    "dev": "gulp dev",
     "help": "gulp help",
     "hot": "gulp hot"
   },
