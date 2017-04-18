@@ -5,6 +5,7 @@
     },
     "./server/search-api": {},
     "./server/component-api": {},
+    "./server/health-api": {},
     "./server/poll": {
       "options": {
         "enable": true
